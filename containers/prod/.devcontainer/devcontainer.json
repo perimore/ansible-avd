@@ -1,0 +1,18 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "FROM_IMAGE": "${localEnv:FROM_IMAGE}",
+            "FROM_VARIANT": "${localEnv:FROM_VARIANT}",
+            "PYAVD_INSTALL_LOCATION": "${localEnv:PYAVD_INSTALL_LOCATION}",
+            "ANSIBLE_INSTALL_LOCATION": "${localEnv:ANSIBLE_INSTALL_LOCATION}",
+            "USERNAME": "${localEnv:USERNAME}",
+            "USER_UID": "${localEnv:UID}",
+            "USER_GID": "${localEnv:GID}",
+            "RFC3339_TIMESTAMP": "${localEnv:RFC3339_TIMESTAMP}",
+            "IMAGE_VERSION": "${localEnv:IMAGE_VERSION}"
+        }
+    },
+    "remoteUser": "${localEnv:USERNAME}"
+}
